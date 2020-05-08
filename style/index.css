@@ -186,7 +186,6 @@ nav .links h1 {
 .top-content {
   border: 1px solid black;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-evenly;
   margin-bottom: 20px;
   border-bottom: 1px dashed black;
@@ -195,7 +194,7 @@ nav .links h1 {
 .top-content .text-container {
   border: 1px solid black;
   width: 48%;
-  padding: 0 1%;
+  padding: 0 1rem;
   padding-bottom: 20px;
 }
 
@@ -290,25 +289,30 @@ footer nav a {
   text-decoration: none;
 }
 @media (max-width: 800px) {
+  header nav .links {
+    width: 100%;
+    justify-content: space-between;
+  }
   .container .img-box {
+    border: 1px solid black;
     display: flex;
-    align-items: center;
     justify-content: center;
   }
   .container img {
     width: 90%;
   }
-  header nav .links {
-    width: 100%;
-    justify-content: space-between;
+  .top-content {
+    border: 1px solid black;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .top-content .text-container {
+    width: 80%;
   }
   .middle-content .boxes .box {
     width: 30%;
     height: 12rem;
-  }
-  footer nav {
-    width: 100%;
-    justify-content: space-around;
   }
   .bottom-content {
     border: 1px solid black;
@@ -322,20 +326,49 @@ footer nav a {
     width: 20rem;
     height: 30vh;
   }
-  .top-content {
-    border: 1px solid black;
-    justify-content: center;
-    align-items: center;
-  }
-  .top-content .text-container {
-    width: 90%;
-  }
   footer nav {
     width: 100vw;
     justify-content: space-around;
   }
 }
 @media (max-width: 500px) {
+  header nav .links {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  header nav .links a {
+    font-size: 1.5rem;
+  }
+  header nav .links h1 {
+    margin-bottom: 1rem;
+  }
+  .img-box {
+    display: flex;
+    justify-content: center;
+    width: 60%;
+    height: 20%;
+    margin-bottom: 2rem;
+  }
+  .container img {
+    height: 100%;
+    width: 100%;
+  }
+  .container {
+    margin-top: 3rem;
+  }
+  .container .top-content {
+    border: 1px solid black;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    margin-left: 6rem;
+  }
+  .top-content .text-container {
+    width: 100%;
+  }
   .middle-content .boxes .box {
     width: 80%;
     height: 15rem;
@@ -343,12 +376,34 @@ footer nav a {
   .middle-content .boxes {
     width: 80%;
     align-items: center;
+    flex-direction: column;
+    justify-content: center;
   }
+
   .middle-content {
+    margin-left: 3.2rem;
     width: 100vw;
+  }
+  .bottom-content {
+    border: 1px solid black;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 50%;
+    height: 70vh;
+    margin-left: 3.5rem;
+  }
+  .bottom-content .text-container {
+    border: 1px solid black;
+    width: 100%;
+    height: 30vh;
   }
   footer nav {
     width: 100vw;
-    justify-content: center;
+    justify-content: space-between;
+  }
+  footer nav a {
+    font-size: 1.5rem;
   }
 }
